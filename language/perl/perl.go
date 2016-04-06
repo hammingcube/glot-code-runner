@@ -1,8 +1,8 @@
 package perl
 
 import (
-	"path/filepath"
 	"github.com/maddyonline/glot-code-runner/cmd"
+	"path/filepath"
 )
 
 func Run(files []string) (string, string, error) {

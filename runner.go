@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"encoding/json"
-	"path/filepath"
-	"io/ioutil"
-	"github.com/maddyonline/glot-code-runner/language"
+	"fmt"
 	"github.com/maddyonline/glot-code-runner/cmd"
+	"github.com/maddyonline/glot-code-runner/language"
+	"io/ioutil"
+	"os"
+	"path/filepath"
 )
 
 type Payload struct {

@@ -1,9 +1,9 @@
 package swift
 
 import (
-	"path/filepath"
-	"github.com/maddyonline/glot-code-runner/util"
 	"github.com/maddyonline/glot-code-runner/cmd"
+	"github.com/maddyonline/glot-code-runner/util"
+	"path/filepath"
 )
 
 func Run(files []string) (string, string, error) {
