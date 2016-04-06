@@ -1,22 +1,22 @@
 package cpp
 
 import (
-    "path/filepath"
-    "../../util"
-    "../../cmd"
+	"github.com/maddyonline/glot-code-runner/cmd"
+	"github.com/maddyonline/glot-code-runner/util"
+	"path/filepath"
 )
 
 func Run(files []string) (string, string, error) {
-    workDir := filepath.Dir(files[0])
-    binName := "a.out"
+	workDir := filepath.Dir(files[0])
+	binName := "a.out"
 
-    sourceFiles := util.FilterByExtension(files, "cpp")
-    args := append([]string{"clang++", "-std=c++11", "-o", binName}, sourceFiles...)
-    stdout, stderr, err := cmd.Run(workDir, args...)
-    if err != nil {
-        return stdout, stderr, err
-    }
+	sourceFiles := util.FilterByExtension(files, "cpp")
+	args := append([]string{"clang++", "-std=c++11", "-o", binName}, sourceFiles...)
+	stdout, stderr, err := cmd.Run(workDir, args...)
+	if err != nil {
+		return stdout, stderr, err
+	}
 
-    binPath := filepath.Join(workDir, binName)
-    return cmd.Run(workDir, binPath)
+	binPath := filepath.Join(workDir, binName)
+	return cmd.Run(workDir, binPath)
 }
