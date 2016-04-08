@@ -53,7 +53,7 @@ temp dir.
 
 In addition, one may optionally provide a file named `__stdin__` as one of the
 element of `files` array. The content of this file is passed to the running code
-via standard input. See [example below](##Examples).
+via standard input. See examples below.
 
 ## Output (stdout)
 The output is a json object containing the properties `stdout`, `stderr` and
@@ -83,7 +83,7 @@ No json will be written to stdout in those cases. Otherwise the exit code is 0.
       "error": ""
     }
 
-### Example 2: An example showing how to provide stdin input to the running program
+### Example 2: An example demonstrating giving stdin input to the program to be run
 #### Input
     {
         "files": [
