@@ -83,7 +83,7 @@ No json will be written to stdout in those cases. Otherwise the exit code is 0.
       "error": ""
     }
 
-### Example 2: An example where stdin input is made available the the running program
+### Example 2: An example with (stdin) input given to the program
 #### Input
     {
         "files": [
