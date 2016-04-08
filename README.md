@@ -51,6 +51,10 @@ forward slashes to create the file in a subdirectory relative to the base
 directory. All files are written into the same base directory under the OS's
 temp dir.
 
+In addition, one may optionally provide a file named `__stdin__` as one of the
+element of `files` array. The content of this file is passed to the running code
+via standard input. See [example below](##Examples).
+
 ## Output (stdout)
 The output is a json object containing the properties `stdout`, `stderr` and
 `error`. `stdout` and `stderr` is captured from the output of the ran code.
@@ -60,6 +64,7 @@ given or if the files cannot be written to disk (permissions, disk space, etc).
 No json will be written to stdout in those cases. Otherwise the exit code is 0.
 
 ## Examples
+### Example 1: A simple example
 #### Input
     {
       "language": "python",
@@ -78,7 +83,8 @@ No json will be written to stdout in those cases. Otherwise the exit code is 0.
       "error": ""
     }
 
-#### Input (with standard input)
+### Example 2: An example showing how to provide stdin input to the running program
+#### Input
     {
         "files": [
             {
