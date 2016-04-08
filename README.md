@@ -77,3 +77,28 @@ No json will be written to stdout in those cases. Otherwise the exit code is 0.
       "stderr": "",
       "error": ""
     }
+
+#### Input (with standard input)
+    {
+        "files": [
+            {
+                "content": "# include <iostream>\nusing namespace std;\nint main() {string s;while(cin >> s) {cout << s.size() << endl;}}",
+                "name": "main.cpp"
+            },
+            {
+                "content": "abc\nhello",
+                "name": "_stdin_"
+            }
+        ],
+        "language": "cpp"
+    }
+
+
+#### Output
+    {
+        "error": "",
+        "stderr": "",
+        "stdout": "3\n5\n"
+    }
+
+
